@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rahul | Developer Portfolio</title>
+  <style>
+    /* === RESET & BASE === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #f7f9fc;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* === NAVIGATION === */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    nav a {
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #e0e0ff;
+    }
+
+    /* === SECTIONS === */
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #333;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      width: 50px;
+      height: 4px;
+      background: #2575fc;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+    }
+
+    /* === HERO === */
+    #hero {
+      text-align: center;
+      padding-top: 5rem;
+    }
+    #hero h1 {
+      font-size: 2.8rem;
+      color: #222;
+    }
+    #hero p {
+      max-width: 600px;
+      margin: 1rem auto;
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    /* === ABOUT === */
+    #about p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* === PROJECTS === */
+    .projects-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      margin-top: 2rem;
+    }
+    .project-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card h3 {
+      margin-bottom: 0.5rem;
+      color: #2575fc;
+    }
+    .project-card p {
+      color: #555;
+    }
+
+    /* === CONTACT === */
+    #contact a {
+      color: #2575fc;
+    }
+
+    /* === FOOTER === */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #222;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    /* === RESPONSIVE NAV === */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 0.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+      #hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <h1>Rahul</h1>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <h1>Hello, I'm Rahul 👋</h1>
+    <p>A passionate Front-End Developer crafting modern and responsive web applications using HTML, CSS, JavaScript, and React.</p>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a front-end developer with a knack for clean design and optimized performance. My goal is to build beautiful, fast, and accessible web apps. I enjoy solving real-world problems and bringing ideas to life through code.
+    </p>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Quiz App</h3>
+        <p>A JavaScript-powered quiz with instant feedback and scoring. Great for learning!</p>
+      </div>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>This very portfolio! A clean, responsive single-page layout to showcase my skills and work.</p>
+      </div>
+      <div class="project-card">
+        <h3>To-Do List</h3>
+        <p>A lightweight to-do list with add/delete functionality and local storage support.</p>
+      </div>
+      <div class="project-card">
+        <h3>Weather App</h3>
+        <p>Fetches real-time weather info using an external API. Built with vanilla JS.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Want to work together or just say hello? Let's connect!</p>
+    <p>Email: <a href="mailto:rahul@example.com">rahul@example.com</a></p>
+    <p>GitHub: <a href="https://github.com/rahuldev" target="_blank">github.com/rahuldev</a></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 Rahul. All rights reserved.
+  </footer>
+
+</body>
+</html>
